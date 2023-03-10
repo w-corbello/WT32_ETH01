@@ -1,0 +1,27 @@
+Go to https://install.wled.me/ to install the firmware on the WT32-ETH01 module.
+
+Steps:
+1. Use a USB to TTL converter (set the voltage to 3.3V).
+2. Hook up wires according to Prgmr_Connections.png (do not use 3.3V from programmer for power).
+3. Connect 12VDC to control board, paying attention to 12VDC(+) and Ground.
+4. Go to (https://install.wled.me/) to install firmware. 
+5. To put the board into program mode: Hold down the White (PRG) switch press the Red (RST) switch and release. Then you can release the White (PRG) switch.
+(During the programming if you have any issues, you may find it helps to hold down the White (PRG) switch during the entire programming cycle)
+6. Once the module is programmed you can access via the SSID (WLED_AP) and the password is (wled1234).
+7. Open up a web browser to http://4.3.2.1/
+8. Go to Settings and then Security and Updates.
+9. Download the ESP32 Ethernet bin file (https://github.com/Aircoookie/WLED-WebInstaller/blob/master/bin-v2/beta_0_14_0-b1/WLED_0.14.0-b1_ESP32_Ethernet.bin)
+10. Select Manual OTA Update, then Choose file and select location you saved the bin file to.
+11. Once the programing is complete, power cycle the board and connect an ethernet cable to module.
+12. Go to WiFI Setting (You may have to reconnect to WLED_AP).
+13. If a static IP is needed change here.
+14. You can change the mDNS address to something you would prefer (http://myLEDDriver1.local).
+15. At the bottom of the page change the dropdown for the Ethernet Type to: WT32-ET01. And press Save & Connect.
+16. Use the settings you changed to, to access device.
+17. Go to LED Preferences to setup outputs. There are 6 outputs, configure them with length of the strip (pixel count), Color Order, and the GPIO as listed below:
+Output 1: GPIO 15
+Output 2: GPIO 14 
+Output 3: GPIO  4
+Output 4: GPIO  2
+Output 5: GPIO 17 
+Output 6: GPIO  5
